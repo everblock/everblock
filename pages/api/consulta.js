@@ -1,6 +1,6 @@
 const Web3 = require("web3")
 
-async function tempo(request,response){ 
+async function consulta(request,response){ 
    
     const { hash } = request.query;
 
@@ -143,7 +143,7 @@ myContract = new web3.eth.Contract([
 			 
              response.json({
 
-                Autor: 'inválido'
+                Resposta: 'Arquivo inválido ou não registrado'
             })
 			
 					
@@ -182,4 +182,4 @@ response.json({
 }*/
 
 
-export default tempo;
+export default consulta;
