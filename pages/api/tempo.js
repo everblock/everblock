@@ -1,14 +1,14 @@
 const Web3 = require("web3")
 
-
 async function tempo(request,response){ 
-    var myContract = require('web3-eth-contract');  
-    
-const provider = new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io");
+   
+    const { hash } = request.query;
+
+       var myContract = require('web3-eth-contract');  
+
+  const provider = new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io");
 //"https://rinkeby.infura.io/v3/1e2d6c8480ba48b69c9eace5b5b25211"
 const web3 = new Web3(provider);
-
-
 			
 web3.eth.defaultAccount = await web3.eth.accounts[0];
 
@@ -136,7 +136,7 @@ myContract = new web3.eth.Contract([
 ],'0xA0638824B89524ebF9c015cFeBc1442eB1111095');
 
 			 	 
-		  var output1 = await myContract.methods.receber('111').call((error, result) => {
+		  var output1 = await myContract.methods.receber(hash).call((error, result) => {
         
 		 if (result[0] == '') {
 			
@@ -156,7 +156,8 @@ myContract = new web3.eth.Contract([
             metadado2: result[1],
             metadado3: result[2],
             metadado4: result[3],
-            metadado5: result[4]
+            metadado5: result[4],
+            metadado6: result[5],
         })
 		
 		//alert(result[0]+ ','+result[1]); 
