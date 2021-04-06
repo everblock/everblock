@@ -1,6 +1,6 @@
 const Web3 = require("web3")
 
-async function gravar(request,response){ 
+ function gravar(request,response){ 
 	const apiSecret =process.env.PKMINHA;
 	if (request.method === 'POST') {
 				
@@ -15,7 +15,7 @@ async function gravar(request,response){
 //"https://rinkeby.infura.io/v3/1e2d6c8480ba48b69c9eace5b5b25211"
 const web3 = new Web3(provider);
 			
-web3.eth.defaultAccount = await web3.eth.accounts[0];
+web3.eth.defaultAccount =  web3.eth.accounts[0];
 
 myContract = new web3.eth.Contract([
 	{
@@ -150,7 +150,7 @@ myContract = new web3.eth.Contract([
 			};
 				  
 				var SENHA= apiSecret;
-		const signPromise = web3.eth.accounts.signTransaction(tx,SENHA);
+		const signPromise =  web3.eth.accounts.signTransaction(tx,SENHA);
 	// $(".resultado").html('Cadastro sendo efetuado na blockchain, por favor aguarde...');
 				
 		signPromise.then((signedTx) => {  
