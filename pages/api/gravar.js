@@ -3,8 +3,7 @@ const Web3 = require("web3")
 async function gravar(request,response){ 
 	const apiSecret =process.env.PKMINHA;
 	if (request.method === 'POST') {
-		
-		
+				
 		var dados = request.body;
 		//res.status(200).json({ name: JJ.pid })
 	
