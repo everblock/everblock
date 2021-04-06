@@ -143,7 +143,7 @@ async function consulta(request, response) {
 
 			response.json({
 
-				Resposta: 'Arquivo inválido ou não registrado'
+				Resposta: 'Arquivo inválido ou não registrado!'
 			})
 
 
@@ -160,26 +160,11 @@ async function consulta(request, response) {
 				metadado6: result[5],
 			})
 
-		//alert(result[0]+ ','+result[1]);    ok
+
 	});
 
 
 }
-
-
-
-
-/*
-function tempo(request,response){
-
-const dynamicDate= new Date();
-
-response.json({
-
-	date: dynamicDate.toGMTString()
-})
-
-}*/
 
 
 export default consulta;
