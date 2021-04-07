@@ -173,6 +173,7 @@ function gravar(request, response) {
 
 			sentTx.on("error", err => {
 				// do something on transaction error
+				
 				console.log(err);
 			});
 
@@ -195,7 +196,7 @@ function gravar(request, response) {
 
 
 
-}
+};
 
 
 /*
