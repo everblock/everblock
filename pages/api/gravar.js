@@ -162,7 +162,11 @@
 
 			sentTx.on("receipt", receipt => {
 
-				response.status(200).json({ name: 'Cadastrado com sucesso' });
+				response.status(200).json({ 
+					
+					Status: 'Cadastrado com sucesso',
+					Txhash: receipt.transactionHash
+			 });
 				// do something when receipt comes back
 				//	 $(".resultado").html('Arquivo registrado com sucesso!<br> Hash da transação: <a href=https://rinkeby.etherscan.io/tx/'+receipt.transactionHash+'>'+receipt.transactionHash+' </a><br><br>');
 
