@@ -19,7 +19,8 @@ async function consulta(request, response) {
 
 		var myContract = require('web3-eth-contract');
 
-		const provider = new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io");
+		const provider = new Web3.providers.HttpProvider("https://rpc.gochain.io");
+		//https://rinkeby-light.eth.linkpool.io
 		//"https://rinkeby.infura.io/v3/1e2d6c8480ba48b69c9eace5b5b25211"
 		const web3 = new Web3(provider);
 
@@ -146,7 +147,9 @@ async function consulta(request, response) {
 				"stateMutability": "view",
 				"type": "function"
 			}
-		], '0xA0638824B89524ebF9c015cFeBc1442eB1111095');
+		], '0xcBcf0f9b62BBaEcf1a74Cd0dc031a7dA48bb38D5');
+		//0xcBcf0f9b62BBaEcf1a74Cd0dc031a7dA48bb38D5
+		//0xA0638824B89524ebF9c015cFeBc1442eB1111095
 
 
 
